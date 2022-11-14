@@ -22,16 +22,16 @@ print('R2 Score: ', r2_score(y, model.predict(x)))
 print('Predicted mpg for 95hp: ', model.predict([[95]]))
 
 
-list = []
-for l in x.values:
-    list.append(int(l[0]))
+x_for_plot = []
+for l in x.to_numpy():
+    x_for_plot.append(float(l[0]))
 
 hp_mpg_plt = plt.axes()
 
-hp_mpg_plt.scatter(list, y)
+hp_mpg_plt.scatter(x_for_plot, y)
 hp_mpg_plt.set_xlabel('Horsepower')
 hp_mpg_plt.set_ylabel('Miles per Gallon')
 hp_mpg_plt.set_title('Horsepower vs Miles per Gallon')
 
-hp_mpg_plt.plot(list, model.predict(x), color='red')
+hp_mpg_plt.plot(x_for_plot, model.predict(x), color='red')
 plt.show()
