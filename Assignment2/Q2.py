@@ -60,5 +60,5 @@ for column in auto:
         axs[2].set_ylabel('Leverage')
 
         #save the plot
-        plt.savefig(r'Assignment2/' + str(column) + '.png')
+        plt.savefig(r'Assignment2/Graphs/' + str(column) + '.png')
         plt.clf()
