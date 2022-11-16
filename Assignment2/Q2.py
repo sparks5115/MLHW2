@@ -60,7 +60,7 @@ for column in auto:
         axs[2].set_ylabel('Leverage')
 
         #save the plot
-        plt.savefig(r'Assignment2/Graphs/' + str(column) + '.png')
+        plt.savefig(r'Assignment2/graphs/' + str(column) + '.png')
         plt.clf()
 
 #for each combination of two columns in the dataframe, we will use linear regression to predict mpg
@@ -105,7 +105,7 @@ for column1 in auto:
                 axs[2].set_ylabel('Leverage')
 
                 #save the plot
-                plt.savefig(r'Assignment2/Graphs/' + str(column1) + ' and ' + str(column2) + '.png')
+                plt.savefig(r'Assignment2/graphs/' + str(column1) + ' and ' + str(column2) + '.png')
                 plt.clf()
 
 # for each column, use linear regression on the log of that column to predict mpg
